@@ -1,15 +1,33 @@
-# FullCalendar Example
+CREATE TABLE BBS (
+bbsID INT,
+bbsTitle VARCHAR(50),
+userID VARCHAR(20),
+bbsDate DATETIME,
+bbsContent VARCHAR(2048),
+bbsAvailable INT,
+ PRIMARY KEY (bbsID)
+  ) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
-## 기능 :+1:
-- 월/주/일/목록별 view
-- 주말 보이기/숨기기
-- 날짜 클릭으로 새로운 일정 등록
-- 일정별 색상 등록
-- 기존일정 클릭시 팝업을 통한 수정, 삭제
-- 드래그, 리사이즈를 이용한 날짜 수정
-- 일정 hover시 팝업
-- 카테고리, 등록자를 통한 일정 필터링
----
-- ## [DEMO PAGE IS HERE](https://saintsilver.github.io/FullCalendar-Example)
-![스크린샷](/image/demo.png)
+CREATE TAble USER (
+userID VARCHAR(20),
+userPassword VARCHAR(20),
+userName VARCHAR(20),
+userGender VARCHAR(20),
+userEmail VARCHAR(50),
+PRIMARY KEY (userID) 
+) DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+create table board(
+_id int,
+title varchar(50),
+description  varchar(50),
+start varchar(50),
+end varchar(50),
+type varchar(50),
+username varchar(50),
+backgroundColor varchar(50),
+textColor varchar(50),
+allDay varchar(50),
+primary key(_id)
+)default charset=utf8 collate utf8_general_ci;
 
