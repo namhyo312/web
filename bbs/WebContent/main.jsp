@@ -13,12 +13,14 @@
 	<meta name="viewport" content="width=device-width" initial-scale="1">
 	<!-- 스타일시트 참조  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/custom.css">
 	<title>jsp 게시판 웹사이트</title>
 	<style type="text/css">
 		a, a:hover {
 			color: #000000;
 			text-decoration: none;
 		}
+		
 	</style>
 	</head>
 	<body>
@@ -89,30 +91,48 @@
 			</div>
 		</nav>
 
-				<!-- 회원만넘어가도록 -->
-				<%
-					//if logined userID라는 변수에 해당 아이디가 담기고 if not null
-					if (session.getAttribute("userID") != null) {
-				%>
-				<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
-				<%
-					} else {
-				%>
-				<button class="btn btn-primary pull-right"
-					onclick="if(confirm('로그인 하세요'))location.href='login.jsp';"
-					type="button">글쓰기</button>
-				<%
-					}
-				%>
+			
+	<p align="middle">
+	<iframe margin="auto" width="1168" height="657" src="https://www.youtube.com/embed/P94SfHo2Gts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	
-	<iframe width="1168" height="657" src="https://www.youtube.com/embed/P94SfHo2Gts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	
-	
-	
-		<!-- 애니매이션 담당 JQUERY -->
+	</p>
+
+
+
+
+
+	<div class="container">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-taget="#myCarousel" data-slide-to="0" ></li>
+				<li data-taget="#myCarousel" data-slide-to="1"></li>
+				<li data-taget="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner" data-cycle-auto-height="3:2">
+				<div class="item ">
+					<img src="images/1.jpg">
+				</div>
+				<div class="item active">
+					<img src="images/2.jpg">
+				</div> 
+				<div class="item">
+					<img src="images/3.jpg">
+				</div>
+			</div>
+
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a> 
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			 <span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div>
+	</div>
+
+	<!-- 애니매이션 담당 JQUERY -->
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<!-- 부트스트랩 JS  -->
 		<script src="js/bootstrap.js"></script>
-	
+	    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
 	</body>
 	</html>
