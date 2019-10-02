@@ -31,7 +31,7 @@ allDay varchar(50),
 primary key(_id)
 )default charset=utf8 collate utf8_general_ci;
 
-- person -
+
 CREATE TABLE EVALUATION (
 evaluationID int PRIMARY KEY AUTO_INCREMENT, #평가 번호
 userID varchar(50), #작성자 아이디
@@ -49,7 +49,7 @@ lectureScore varchar(10), #강의 점수
 likeCount int #추천갯수
 );
 
-- user- //기존 user테이블 있으니 이름변경
+
 CREATE TABLE USER (
   userID varchar(50), #작성자 아이디
   userPassword varchar(50), #작성자 비밀번호
@@ -58,7 +58,7 @@ CREATE TABLE USER (
   userEmailChecked boolean #이메일 확인 여부
 );
 
-- Like -
+
 CREATE TABLE LIKEY (
   userID varchar(50), #작성자 아이디
   evaluationID int, #평가 번호
